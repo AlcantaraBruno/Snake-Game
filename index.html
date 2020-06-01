@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- defer faz que o script js seja carregando do final. -->
+    <script defer src="script.js"></script>
+    <title>Snake Game</title>
+</head>
+<body onload="carregarRecord()">
+    <h2>Pontuação: <span id= "cont">0</span></h2>
+    <h3>Record: <span id="recor">0</span></h3>
+    <h1>SNAKE GAME </h1>
+    <canvas id="snake" width="512" height="512"></canvas>
+</body>
+</html>
