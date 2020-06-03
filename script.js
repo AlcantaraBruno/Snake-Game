@@ -27,7 +27,7 @@ class Bd {
 
     recuperarRegistros () {
         
-        
+        /*
         let array = Array();
         let id = JSON.parse(localStorage.getItem('despesa'))
         let id_2 = localStorage.getItem('despesa')
@@ -35,13 +35,42 @@ class Bd {
         console.log("array", array.gravar)
         console.log("contador array", contador)
         
+        
         if (contador > array.gravar){
         recor.innerHTML = array.gravar;
         console.log("testando o record 2", id)
         console.log ('Estamos chegando até aqui')
         };
+
+        */
+        
+        
     }
 }
+
+function recDados (contador){
+       
+    let array = Array();
+        let id = JSON.parse(localStorage.getItem('despesa'))
+        let id_2 = localStorage.getItem('despesa')
+        array = id
+        recDados2();
+        
+        console.log("contador?", contador)
+        if (gravar => array.gravar){
+        recor.innerHTML = array.gravar;
+        console.log('array.gravar', array.gravar)
+        
+        };
+
+        function recDados2 (){
+        recor.innerHTML = array.gravar;
+        console.log('recdados2')
+        }
+        
+}
+
+
 
 let bd = new Bd()
 
@@ -113,10 +142,10 @@ function iniciarJogo(){
             
             gravar = contador;
             bd.recuperarRegistros();
+            
             console.log("chamou")
             
             cadastrar(gravar);
-            
 
             clearInterval(jogo);
             alert('Game Over: :c')
@@ -178,8 +207,9 @@ function iniciarJogo(){
 }
 
 
-
 let jogo = setInterval(iniciarJogo, 100);
+recDados();
+
 
 
 
