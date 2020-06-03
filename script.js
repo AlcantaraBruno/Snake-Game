@@ -19,13 +19,13 @@ class Record {
     }
     // salva o recorde do localStorage
     saveRecord (d) {
-        localStorage.setItem('despesa', JSON.stringify(d))
+        localStorage.setItem('key', JSON.stringify(d))
     }
 }
 
 
 let array = Array();
-let id = JSON.parse(localStorage.getItem('despesa'))
+let id = JSON.parse(localStorage.getItem('key'))
 array = id
 
 function recDados (){ 
