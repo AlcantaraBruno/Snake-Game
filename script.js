@@ -48,26 +48,13 @@ class Bd {
     }
 }
 
-function recDados (contador){
-       
-    let array = Array();
-        let id = JSON.parse(localStorage.getItem('despesa'))
-        let id_2 = localStorage.getItem('despesa')
-        array = id
-        recDados2();
-        
-        console.log("contador?", contador)
-        if (gravar => array.gravar){
-        recor.innerHTML = array.gravar;
-        console.log('array.gravar', array.gravar)
-        
-        };
+let array = Array();
+let id = JSON.parse(localStorage.getItem('despesa'))
+//let id_2 = localStorage.getItem('despesa')
+array = id
 
-        function recDados2 (){
-        recor.innerHTML = array.gravar;
-        console.log('recdados2')
-        }
-        
+function recDados (){ 
+    recor.innerHTML = array.gravar;      
 }
 
 
@@ -140,13 +127,19 @@ function iniciarJogo(){
         if(snake[0].x == snake [i].x && snake[0].y == snake[i].y){
 
             
-            gravar = contador;
+            gravar = contador
             bd.recuperarRegistros();
-            
-            console.log("chamou")
-            
-            cadastrar(gravar);
+            recDados(contador);
 
+            if (gravar > array.gravar){
+                cadastrar(gravar);  
+            }
+            
+            console.log("chamou fim de jogo")
+            console.log('chamou gravar', gravar)
+            console.log('contador é igual: ', contador)
+            
+            
             clearInterval(jogo);
             alert('Game Over: :c')
         }
