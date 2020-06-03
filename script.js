@@ -17,50 +17,22 @@ class Record {
     constructor(gravar){
         this.gravar = gravar
     }
-}
-
-// salvar o record no localStorage
-class Bd {
+    // salva o recorde do localStorage
     saveRecord (d) {
         localStorage.setItem('despesa', JSON.stringify(d))
     }
-
-    recuperarRegistros () {
-        
-        /*
-        let array = Array();
-        let id = JSON.parse(localStorage.getItem('despesa'))
-        let id_2 = localStorage.getItem('despesa')
-        array = id
-        console.log("array", array.gravar)
-        console.log("contador array", contador)
-        
-        
-        if (contador > array.gravar){
-        recor.innerHTML = array.gravar;
-        console.log("testando o record 2", id)
-        console.log ('Estamos chegando até aqui')
-        };
-
-        */
-        
-        
-    }
 }
+
 
 let array = Array();
 let id = JSON.parse(localStorage.getItem('despesa'))
-//let id_2 = localStorage.getItem('despesa')
 array = id
 
 function recDados (){ 
     recor.innerHTML = array.gravar;      
 }
 
-
-
-let bd = new Bd()
-
+let bd = new Record()
 
 function cadastrar(gravar){
 
@@ -72,14 +44,6 @@ function cadastrar(gravar){
     console.log(" AQUI ESTÁ O RESULTADO ", bd_gravar)
     bd.saveRecord(bd_gravar)
 }
-
-
-function carregarRecord(){
-    x = bd.recuperarRegistros()
-    console.log("here", x)
-}
-
-
 
 let direction = "right";
 
@@ -128,7 +92,6 @@ function iniciarJogo(){
 
             
             gravar = contador
-            bd.recuperarRegistros();
             recDados(contador);
 
             if (gravar > array.gravar){
@@ -145,10 +108,7 @@ function iniciarJogo(){
         }
     }
 
-   
-
     // para atravesar as paredas 
-
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake [0].x = 16 * box;
     if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
@@ -185,11 +145,6 @@ function iniciarJogo(){
         cont.innerHTML = contador;
     }
 
-    
-
-
-
-
     //nova cabeça 
     let newHead = {
         x: snakeX, 
@@ -198,7 +153,6 @@ function iniciarJogo(){
 
     snake.unshift(newHead);
 }
-
 
 let jogo = setInterval(iniciarJogo, 100);
 recDados();
