@@ -5,7 +5,49 @@ body{
     justify-content:  center;
     align-items: center;
     flex-direction: column;
-    color: green;
+    color: black;
 }
 
+h1 {
+    font-family: 'Piedra', cursive;
+    font-family: 'Press Start 2P', cursive;
+    color: #33FF58;
+}
+
+h4 {
+    font-family: 'Piedra', cursive;
+    font-family: 'Play', sans-serif;
+    font-family: 'Press Start 2P', cursive;  
+    color: greenyellow;  
+}
+
+.banner{
+    background-image: url("foto.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+/*
+.corpo {
+    width: 960px;
+    margin: auto;
+}
+*/
+.conteudo {
+    display: table;
+}
+
+.text1 {
+    display: table-cell;
+    float: left;
+}
+.text2 {
+    display: table-cell;
+    float: left;
+    margin-left: 30px;
+}
+
+.cor {
+    color: #05EE9A;
+}
 

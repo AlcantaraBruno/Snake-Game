@@ -55,7 +55,8 @@ let food = {
 
 function criarBG() {
     //cor do fundo do canva
-    context.fillStyle = "lightgreen"
+    //context.fillStyle = "#06070e"
+    context.fillStyle = "#88ED07"
     // vai desenhar o retangulo
     context.fillRect(0,0,16 * box, 16*box);
 }
@@ -63,15 +64,15 @@ function criarBG() {
 function criarCobrinha(){
 
     for(i=0; i < snake.length; i++){
-        context.fillStyle = "blue";
-        context.fillRect(snake[i].x, snake[i].y, box, box);
+        context.fillStyle = "#262822";
+        context.fillRect(snake[i].x, snake[i].y, box-1, box-1);
     }
 
 }
 
 //Desenhar a comida
 function drawFood(){
-    context.fillStyle = "red";
+    context.fillStyle = "#262822";
     context.fillRect(food.x, food.y, box, box);
 }
 
@@ -97,12 +98,7 @@ function iniciarJogo(){
             if (gravar > array.gravar){
                 cadastrar(gravar);  
             }
-            
-            console.log("chamou fim de jogo")
-            console.log('chamou gravar', gravar)
-            console.log('contador é igual: ', contador)
-            
-            
+             
             clearInterval(jogo);
             alert('Game Over: :c')
         }
